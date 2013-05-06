@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+* { margin:0; padding:0 }
+html, body { height:100%;}
+body { font-family: 'Happy Monkey', cursive; background-color:#009375; color:#fff; }
+#content {text-align:center;}
+.hide { display:none; }
+dt { font-size:2em; }
+dd { font-size:3em; margin-top:30px; }
+ul { list-style-type:none; }
+.last li:hover { font-size:1.3em; cursor:pointer;}
+/*
+.yes:before { content:"-> "; }
+.no { padding-left:10px; }
+*/

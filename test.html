@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+		* {margin:0; padding:0;}
+		html,body {height:100%;}
+		body {background-color:rgba(0, 147, 117, 0.5);}
+		#content {font-size:3em;}
+		.hide {display:none;}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<dl class="hide">
+			<dt>Item</dt>
+			<dd>Description</dd>
+		</dl>
+	</div>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+    	$(function() {
+			
+			jQuery.fn.center = function () {
+				this.css('position', 'absolute');
+				this.css('top', ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + 'px');
+				this.css('left', ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + 'px');
+				return this;
+			};
+			
+    		$('#content')
+    			.find('dl')
+    			.fadeIn(3000, function() {
+    				$(this).removeClass('hide');
+				})
+    			.center()
+    		;
+    		
+		});
+    </script>
+</body>
+</html>
